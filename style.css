@@ -6,6 +6,7 @@ body {
   text-align: center;
   font-family: "Press Start 2P", cursive;
   user-select: none;
+  touch-action: manipulation;
 }
 header {
   margin: 0 auto;
