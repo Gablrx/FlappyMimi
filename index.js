@@ -14,7 +14,7 @@ const jump = -8.5;
 const cTenth = (canvas.width / 10);
 
 let index = 0,
-    bestScore = 0,
+    bestScore = localStorage.getItem("highscore") || 0,
     flight,
     flyHeight,
     currentScore,
@@ -69,7 +69,10 @@ const render = () => {
                 // check si meilleur score
                 bestScore = Math.max(bestScore, currentScore);
 
-                // remove & create new tuyau
+                // Save score
+                localStorage.setItem("highscore", bestScore);
+
+                // remove & create new pipe
                 pipes = [...pipes.slice(1), [pipes[pipes.length - 1][0] + pipeGap + pipeWidth, pipeLoc()]];
                 console.log(pipeGap);
             }
