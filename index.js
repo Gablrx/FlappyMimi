@@ -88,9 +88,9 @@ const render = () => {
 
             // si touche un tuyau -> gameover
             if ([
-                pipe[0] <= cTenth + size[0],
+                pipe[0] <= cTenth + 147,
                 pipe[0] + pipeWidth >= cTenth,
-                pipe[1] > flyHeight || pipe[1] + pipeGap < flyHeight + size[1]
+                pipe[1] > flyHeight || pipe[1] + pipeGap < flyHeight + 35
             ].every(elem => elem)) {
                 gamePlaying = false;
                 pipeGap = 350;
